@@ -1843,11 +1843,11 @@ case class ArrayMax(child: Expression) extends UnaryExpression with ImplicitCast
  */
 @ExpressionDescription(
   usage = """
-    _FUNC_(array, element) - Returns the (1-based) index of the first element of the array as long.
+    _FUNC_(array, element) - Returns the (1-based) index of the first occurence of element in the array as long.
   """,
   examples = """
     Examples:
-      > SELECT _FUNC_(array(3, 2, 1), 1);
+      > SELECT _FUNC_(array(3, 1, 4, 2), 4);
        3
   """,
   since = "2.4.0")
